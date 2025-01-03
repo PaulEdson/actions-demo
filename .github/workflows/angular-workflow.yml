@@ -8,8 +8,6 @@ on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,10 +31,10 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           # AWS Access Key ID. Provide this key if you want to assume a role using access keys rather than a web identity token.
-          aws-access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+          aws-access-key-id: ${{ secrets.ACESS_KEY_ID }}
           # AWS Secret Access Key. Required if aws-access-key-id is provided.
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
-          #aws-region: us-east-1
+          aws-region: us-east-1
           
       - name: install node
         uses: actions/setup-node@v4.1.0
