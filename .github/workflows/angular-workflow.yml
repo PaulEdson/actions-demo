@@ -52,6 +52,6 @@ jobs:
         run: npm run build
 
       - name: deploy to s3 bucket
-        run: aws s3 sync /home/runner/work/actions-demo/actions-demo/sampleWebpage/dist/sample-webpage s3://actions-demo-pje
+        run: aws s3 sync /home/runner/work/actions-demo/actions-demo/sampleWebpage/dist/sample-webpage/browser s3://actions-demo-pje
         
     #more builds that would run in parallel here
